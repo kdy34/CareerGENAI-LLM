@@ -1,0 +1,224 @@
+import Link from "next/link";
+
+export default function HomePage() {
+  return (
+    <div className="page">
+      {/* Hero */}
+      <section className="hero-section">
+        <div>
+          <div className="hero-pill">
+            <span className="hero-pill-dot" />
+            <span>AI career mentor for ML / Data / AI roles</span>
+          </div>
+
+          <h1 className="hero-title" style={{ marginTop: "0.7rem" }}>
+            Turn your <span className="hero-highlight">technical CV</span> into
+            a role-ready roadmap.
+          </h1>
+
+          <p className="hero-subtitle">
+            Upload your CV, choose a target role like{" "}
+            <span style={{ fontWeight: 600, color: "#bae6fd" }}>
+              Machine Learning Engineer
+            </span>{" "}
+            or{" "}
+            <span style={{ fontWeight: 600, color: "#bae6fd" }}>
+              Data Scientist
+            </span>
+            , and let the role intelligence engine map your skills, detect gaps,
+            and propose a concrete learning and project plan.
+          </p>
+
+          <div className="hero-actions">
+            <Link href="/upload" className="btn btn-primary">
+              Get started · Upload CV
+            </Link>
+            <a href="#how-it-works" className="btn btn-outline">
+              See how it works
+            </a>
+          </div>
+
+          <div className="hero-badges">
+            <div className="hero-badge">
+              <span className="hero-badge-dot hero-badge-dot--emerald" />
+              <span>LLM-powered skill & gap analysis</span>
+            </div>
+            <div className="hero-badge">
+              <span className="hero-badge-dot hero-badge-dot--sky" />
+              <span>Python · FastAPI · PostgreSQL · Next.js</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Demo card */}
+        <div>
+          <div className="card">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: "0.75rem",
+                alignItems: "flex-start",
+              }}
+            >
+              <div>
+                <p
+                  style={{
+                    fontSize: "0.7rem",
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "#9ca3af",
+                    margin: 0,
+                  }}
+                >
+                  Demo snapshot
+                </p>
+                <p
+                  style={{
+                    margin: "0.2rem 0 0",
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                  }}
+                >
+                  ML Engineer · Role fit overview
+                </p>
+              </div>
+              <span
+                style={{
+                  borderRadius: "999px",
+                  padding: "0.2rem 0.65rem",
+                  fontSize: "0.7rem",
+                  border: "1px solid rgba(52,211,153,0.7)",
+                  background: "rgba(16,185,129,0.25)",
+                  color: "#bbf7d0",
+                }}
+              >
+                Sample data
+              </span>
+            </div>
+
+            <div className="metric-grid">
+              <div className="metric-card">
+                <div className="metric-label">Match score</div>
+                <div className="metric-value" style={{ color: "#6ee7b7" }}>
+                  74%
+                </div>
+                <div className="metric-caption">Strong Python & ML</div>
+              </div>
+              <div className="metric-card">
+                <div className="metric-label">Core gaps</div>
+                <div className="metric-value" style={{ color: "#fecaca" }}>
+                  4
+                </div>
+                <div className="metric-caption">MLOps & system design</div>
+              </div>
+              <div className="metric-card">
+                <div className="metric-label">Projects</div>
+                <div className="metric-value" style={{ color: "#bae6fd" }}>
+                  5
+                </div>
+                <div className="metric-caption">Portfolio-ready builds</div>
+              </div>
+            </div>
+
+            <div
+              style={{
+                marginTop: "0.8rem",
+                paddingTop: "0.6rem",
+                borderTop: "1px solid rgba(30,64,175,0.6)",
+                fontSize: "0.72rem",
+                color: "#e5e7eb",
+              }}
+            >
+              “Build an end-to-end real-time fraud detection pipeline with model
+              monitoring, experiment tracking, and CI/CD.”
+              <div
+                style={{
+                  marginTop: "0.25rem",
+                  fontSize: "0.7rem",
+                  color: "#9ca3af",
+                }}
+              >
+                Example project idea generated by the LLM, aligned with your
+                strengths and missing skills.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section id="how-it-works">
+        <div className="section-header">
+          <div>
+            <h2 className="section-title">How it works</h2>
+            <p className="section-subtitle">
+              From CV → skills → gaps → roadmap → portfolio projects.
+            </p>
+          </div>
+          <span className="section-note">
+            Under the hood: Python, FastAPI, PostgreSQL, Next.js, Docker, and an
+            LLM.
+          </span>
+        </div>
+
+        <div className="hiw-grid" style={{ marginTop: "0.8rem" }}>
+          <div className="hiw-card">
+            <div className="hiw-step hiw-step--emerald">1</div>
+            <div className="hiw-title">Upload & target</div>
+            <p className="hiw-text">
+              Upload your CV and choose or type a target role such as ML
+              Engineer, Data Scientist, or GenAI Engineer.
+            </p>
+          </div>
+          <div className="hiw-card">
+            <div className="hiw-step hiw-step--sky">2</div>
+            <div className="hiw-title">Skill extraction</div>
+            <p className="hiw-text">
+              The backend parses your CV, maps skills into a custom taxonomy,
+              and detects strengths and missing areas.
+            </p>
+          </div>
+          <div className="hiw-card">
+            <div className="hiw-step hiw-step--fuchsia">3</div>
+            <div className="hiw-title">LLM roadmap & projects</div>
+            <p className="hiw-text">
+              An LLM generates a phased learning roadmap and portfolio-ready
+              project ideas tailored to your profile.
+            </p>
+          </div>
+          <div className="hiw-card">
+            <div className="hiw-step hiw-step--amber">4</div>
+            <div className="hiw-title">Dashboard & export</div>
+            <p className="hiw-text">
+              View charts, skill breakdown, roadmap preview and projects on a
+              dedicated dashboard, and export as a report.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-strip">
+        <div>
+          <div className="cta-title">
+            Ready to see your own role fit analysis?
+          </div>
+          <p className="cta-text">
+            Run your CV through the engine and get a breakdown of strengths,
+            gaps, learning phases, and concrete project ideas in under a minute.
+            Ideal for students, early-career ML engineers, and career-switchers.
+          </p>
+        </div>
+        <div className="cta-actions">
+          <Link href="/upload" className="btn btn-primary">
+            Start now · Upload CV
+          </Link>
+          <Link href="/upload" className="btn btn-outline">
+            View analysis dashboard
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}

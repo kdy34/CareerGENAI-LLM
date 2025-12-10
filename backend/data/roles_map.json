@@ -1,0 +1,96 @@
+{
+  "machine learning engineer": {
+    "canonical_name": "Machine Learning Engineer",
+    "description": "Builds, deploys, and maintains machine learning models in production.",
+    "seniority": "mid",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "Statistics",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "SQL",
+      "Git"
+    ],
+    "nice_to_have_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "TensorFlow",
+      "MLOps",
+      "Docker",
+      "Kubernetes",
+      "Cloud Computing",
+      "CI/CD"
+    ],
+    "typical_tools": [
+      "Jupyter",
+      "VS Code",
+      "GitHub",
+      "AWS",
+      "GCP",
+      "Azure"
+    ]
+  },
+  "data scientist": {
+    "canonical_name": "Data Scientist",
+    "description": "Uses data to derive insights, build models, and support business decisions.",
+    "seniority": "mid",
+    "required_skills": [
+      "Python",
+      "Statistics",
+      "Machine Learning",
+      "Pandas",
+      "NumPy",
+      "SQL",
+      "Data Visualization"
+    ],
+    "nice_to_have_skills": [
+      "Deep Learning",
+      "A/B Testing",
+      "Experimentation",
+      "Power BI",
+      "Tableau",
+      "R"
+    ],
+    "typical_tools": [
+      "Jupyter",
+      "VS Code",
+      "Power BI",
+      "Tableau",
+      "GitHub"
+    ]
+  },
+  "ai engineer": {
+    "canonical_name": "AI Engineer",
+    "description": "Builds and integrates AI systems, often using LLMs and GenAI frameworks.",
+    "seniority": "mid",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "LLM",
+      "GenAI",
+      "APIs",
+      "REST",
+      "SQL",
+      "Git"
+    ],
+    "nice_to_have_skills": [
+      "LangChain",
+      "RAG",
+      "Vector Databases",
+      "Prompt Engineering",
+      "Cloud Computing",
+      "Docker",
+      "Kubernetes"
+    ],
+    "typical_tools": [
+      "VS Code",
+      "GitHub",
+      "OpenAI API",
+      "Anthropic API",
+      "Pinecone",
+      "Weaviate"
+    ]
+  }
+}

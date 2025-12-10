@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:17
+    container_name: career-genai-db
+    environment:
+      POSTGRES_DB: DB_NAME
+      POSTGRES_USER: yourusername
+      POSTGRES_PASSWORD: yourpassword
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: career-genai-backend
+    environment:
+      LLM_PROVIDER: "gemini"
+      GOOGLE_API_KEY: "AI_API_KEY_HERE"
+      GEMINI_MODEL: "gemini-2.5-flash"
+      DATABASE_URL: "postgresql+psycopg://UNAME:PASSWORDs@db:5432/DB_NAME"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: career-genai-frontend
+    env_file:
+      - ./frontend/.env
+    environment:
+      INTERNAL_API_BASE: "http://backend:8000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+
+volumes:
+  pgdata:

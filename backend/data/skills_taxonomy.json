@@ -1,0 +1,72 @@
+{
+  "python": {
+    "canonical": "Python",
+    "category": "language",
+    "aliases": ["python3", "py"]
+  },
+  "pandas": {
+    "canonical": "Pandas",
+    "category": "library",
+    "aliases": []
+  },
+  "numpy": {
+    "canonical": "NumPy",
+    "category": "library",
+    "aliases": ["np"]
+  },
+  "scikit-learn": {
+    "canonical": "Scikit-learn",
+    "category": "library",
+    "aliases": ["sklearn", "scikit learn"]
+  },
+  "tensorflow": {
+    "canonical": "TensorFlow",
+    "category": "deep_learning",
+    "aliases": ["tf"]
+  },
+  "pytorch": {
+    "canonical": "PyTorch",
+    "category": "deep_learning",
+    "aliases": ["torch"]
+  },
+  "sql": {
+    "canonical": "SQL",
+    "category": "language",
+    "aliases": ["postgres", "mysql", "mssql"]
+  },
+  "docker": {
+    "canonical": "Docker",
+    "category": "devops",
+    "aliases": []
+  },
+  "kubernetes": {
+    "canonical": "Kubernetes",
+    "category": "devops",
+    "aliases": ["k8s"]
+  },
+  "cloud computing": {
+    "canonical": "Cloud Computing",
+    "category": "cloud",
+    "aliases": ["aws", "azure", "gcp"]
+  },
+  "machine learning": {
+    "canonical": "Machine Learning",
+    "category": "ml",
+    "aliases": ["ml"]
+  },
+  "deep learning": {
+    "canonical": "Deep Learning",
+    "category": "ml",
+    "aliases": ["dl"]
+  },
+  "llm": {
+    "canonical": "LLM",
+    "category": "genai",
+    "aliases": ["large language model"]
+  },
+  "genai": {
+    "canonical": "GenAI",
+    "category": "genai",
+    "aliases": ["generative ai", "generative models"]
+  }
+}

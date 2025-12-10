@@ -1,0 +1,52 @@
+
+---
+
+# ✅ **.gitignore (Recommended for your project)**
+
+```gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# FastAPI / Cache
+backend/.pytest_cache/
+backend/.mypy_cache/
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+
+# Logs
+*.log
+
+# Local env files
+backend/.env
+backend/.env.prod
+frontend/.env
+frontend/.env.prod
+infra/aws/*.env
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Docker
+**/pgdata/
+docker-compose.override.yml
+
+# Build artifacts
+*.bak
+*.tmp
+Thumbs.db
