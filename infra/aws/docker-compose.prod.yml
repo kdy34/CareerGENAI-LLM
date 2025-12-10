@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   backend:
-    image: 831250773388.dkr.ecr.us-east-1.amazonaws.com/career-genai-backend:latest
+    image: ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/career-genai-backend:latest
     container_name: career-genai-backend
     restart: unless-stopped
     env_file:
@@ -11,7 +11,7 @@ services:
       - "8000:8000"
 
   frontend:
-    image: 831250773388.dkr.ecr.us-east-1.amazonaws.com/career-genai-frontend:latest
+    image: ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/career-genai-frontend:latest
     container_name: career-genai-frontend
     restart: unless-stopped
     env_file:
