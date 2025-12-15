@@ -91,3 +91,45 @@ Local development uses:
 
 ```sh
 docker compose up --build
+
+### **To run the project**
+
+-Make sure that you have Docker Desktop installed and running and also Docker Compose available
+
+-Go to the backend folder and create your .env file from the example
+cp backend/.env.example backend/.env
+
+-Then edit backend/.env and set required variables such as:
+
+DATABASE_URL (PostgreSQL connection string)
+
+LLM_PROVIDER
+
+GEMINI_API_KEY
+
+GEMINI_MODEL
+
+-Do the same thing for the frontend environment
+
+-Check Docker Compose configurations
+docker-compose.yml already defines the required services. Ensure the database settings match your intended configuration.
+
+-Verify the ports
+
+-Finally:
+docker compose build --no-cache
+docker compose up
+docker compose up -d (To run in the background)
+
+docker compose down (To stop the application)
+
+-Accessing to application:
+
+Frontend (Upload Page):
+http://localhost:3000/upload
+
+Frontend (Results Page):
+http://localhost:3000/results
+
+Backend API Docs (Swagger):
+http://localhost:8000/docs
