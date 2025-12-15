@@ -86,12 +86,6 @@ Every analysis run is saved to database:
 - `roadmap_md`
 - `target_role`
 
-### **6. Full Dockerization**
-Local development uses:
-
-```sh
-docker compose up --build
-
 ### **To run the project**
 
 -Make sure that you have Docker Desktop installed and running and also Docker Compose available
@@ -133,3 +127,10 @@ http://localhost:3000/results
 
 Backend API Docs (Swagger):
 http://localhost:8000/docs
+
+
+### **6. Full Dockerization**
+Local development uses:
+
+```sh
+docker compose up --build
