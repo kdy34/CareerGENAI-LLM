@@ -86,51 +86,84 @@ Every analysis run is saved to database:
 - `roadmap_md`
 - `target_role`
 
-### **To run the project**
-
--Make sure that you have Docker Desktop installed and running and also Docker Compose available
-
--Go to the backend folder and create your .env file from the example
-cp backend/.env.example backend/.env
-
--Then edit backend/.env and set required variables such as:
-
-DATABASE_URL (PostgreSQL connection string)
-
-LLM_PROVIDER
-
-GEMINI_API_KEY
-
-GEMINI_MODEL
-
--Do the same thing for the frontend environment
-
--Check Docker Compose configurations
-docker-compose.yml already defines the required services. Ensure the database settings match your intended configuration.
-
--Verify the ports
-
--Finally:
-docker compose build --no-cache
-docker compose up
-docker compose up -d (To run in the background)
-
-docker compose down (To stop the application)
-
--Accessing to application:
-
-Frontend (Upload Page):
-http://localhost:3000/upload
-
-Frontend (Results Page):
-http://localhost:3000/results
-
-Backend API Docs (Swagger):
-http://localhost:8000/docs
-
-
 ### **6. Full Dockerization**
 Local development uses:
 
 ```sh
 docker compose up --build
+```
+
+---
+
+## 🚀 Running the Project Locally (Docker)
+
+This project is fully containerized and can be run locally using **Docker Compose**.
+
+---
+
+### ✅ Prerequisites
+
+Before starting, make sure you have:
+
+- **Docker Desktop installed and running**
+- **Docker Compose** available (included with Docker Desktop)
+- A free **Gemini API Key** (for LLM features)
+
+---
+
+### 🔧 Environment Configuration
+
+#### **Backend Environment**
+Create the backend `.env` file from the example:
+
+```sh
+cp backend/.env.example backend/.env
+```
+#### **Frontend Environment**
+Create the fronend `.env` file from the example:
+
+```sh
+cp frontend/.env.example frontend/.env
+```
+
+- **Docker Compose** Configuration, The docker-compose.yml file already defines all required services.
+
+#### **▶️ Build & Run the Application**
+From the project root:
+
+```sh
+docker compose build --no-cache
+docker compose up
+```
+
+#### **Stop the Application**
+
+```sh
+docker compose down
+docker compose down -v
+```
+To also remove database volumes.
+
+#### **🌐 Access the Application**
+
+- Frontend – Upload Page:
+  http://localhost:3000/upload
+
+-  Frontend – Results Page:
+   http://localhost:3000/results
+
+-  Backend – API Docs (Swagger):
+   http://localhost:8000/docs
+
+#### **🛠 Troubleshooting**
+
+- Make sure Docker Desktop is running
+
+- Verify ports are not occupied
+
+```sh
+docker compose logs -f backend
+docker compose logs -f frontend
+docker compose logs -f db
+```
+
